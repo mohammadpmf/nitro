@@ -1,0 +1,66 @@
+{% extends '_base.html' %}
+
+{% load my_tags %}
+
+{% block title %}
+posts list
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-9">
+            {% for post in posts %}
+            <div class="card shadow-sm my-3">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ post.title }} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted small py-2"> {{ post.datetime_created }} </h6>
+                    <p class="card-text py-3" style="text-align: justify;">
+                        {% comment %} این ها مهم تر هستند این ها رو نشون بدم به بچه ها. {% endcomment %}
+                        {% comment %} {{ post.text| upper }} {% endcomment %}
+                        {% comment %} {{ post.text| lower }} {% endcomment %}
+                        {% comment %} {{ post.text | capfirst }} {% endcomment %}
+                        {% comment %} {{ post.text | title }} {% endcomment %}
+                        {% comment %} {{ post.text | wordcount }} {% endcomment %}
+                        {% comment %} {{ post.text | linebreaks }} {% endcomment %}
+                        {% comment %} {{ post.text | linebreaksbr }} {% endcomment %}
+                        {{ post.text | truncatewords:20 }}
+                        {% comment %} {{ post.text | truncatechars:10 }} {% endcomment %}
+
+                        {% comment %} این ها رو فقط بگم چیکار میکنن. لازم نیست نشون بدم. {% endcomment %}
+                        {% comment %} {{ post.text | random }} {% endcomment %}
+                        {% comment %} {{ post.text | slugify }} {% endcomment %}
+                        {% comment %} {{ post.text | add:"2" }} {% endcomment %}
+                        {% comment %} {{ post.text | cut:" " }} {% endcomment %}
+
+                        {% comment %} این سایت رو هم معرفی کنم فقط. خودشون اگه دوست دارن ببینن. {% endcomment %}
+                        {% comment %} https://docs.djangoproject.com/en/4.1/ref/templates/builtins/#built-in-filter-reference {% endcomment %}
+
+                        {% comment %} تمپلیت فیلتر ها مهمه. هر دو موردش رو بگم بهشون. {% endcomment %}
+                        {% comment %} {{ post.text | add_poulstar }} {% endcomment %}
+                        {% comment %} {{ post.text | add_something:'hello' }} {% endcomment %}
+                    </p>
+                    {% comment %} <a href = "/blog/{{post.id}}" class="btn btn-sm btn-outline-success">Read More</a> {% endcomment %}
+                    <a href = "{% url 'post_detail' post.id %}" class="btn btn-sm btn-outline-success">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-3">
+            <div class="card my-4">
+                <h5 class="card-header">About</h5>
+                <div class="card-body">
+                    <p class="card-text";>Poulstar is an institute which help children learn
+                        different programming languagess. Kids and teenager learn how to
+                        code in different programming languages by games and playing.
+                    </p>
+                    <a href="#"
+                        class="btn btn-sm btn-outline-primary">
+                        More...
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

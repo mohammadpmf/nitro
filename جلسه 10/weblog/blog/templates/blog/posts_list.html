@@ -1,0 +1,42 @@
+{% extends '_base.html' %}
+
+{% block title %}
+posts list
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-9">
+            <div class="card shadow-sm my-3">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted small py-2">16 Nov 2022</h6>
+                    <p class="card-text py-3" style="text-align: justify;">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus dicta quibusdam soluta nesciunt, autem delectus numquam quas sint, corrupti sed facilis eveniet distinctio eligendi repudiandae esse et quo nulla. Hic.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti optio dicta quod quis voluptates atque eius eos laudantium, quaerat, minima veritatis in illum saepe cum fugit! Fugit, repudiandae animi. Provident.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus qui cumque possimus id et quam? Magni consequatur sequi soluta eius aperiam, quos voluptatem a dolores atque enim numquam, est odio!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, sit quis ea vero veniam blanditiis suscipit itaque quibusdam illo molestias nobis velit inventore error, rerum ipsa. Aliquid tempora voluptatum expedita!
+                    </p>
+                    <div class="btn btn-sm btn-outline-success">Read More</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card my-4">
+                <h5 class="card-header">About</h5>
+                <div class="card-body">
+                    <p class="card-text";>Poulstar is an institute which help children learn
+                        different programming languagess. Kids and teenager learn how to
+                        code in different programming languages by games and playing.
+                    </p>
+                    <a href="#"
+                        class="btn btn-sm btn-outline-primary">
+                        More...
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

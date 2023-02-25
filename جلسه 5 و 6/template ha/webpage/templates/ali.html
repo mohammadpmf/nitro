@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        a{
+            font-size: 3em;
+            text-decoration: none;
+            transition: font-size 1s;
+        }
+        a:hover{
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome To my php 🤣</h1>
+    <p>Does php stand for Personal Home Page? PHP</p>
+    <p>Was it really a personal project?</p>
+    <p>blah. blah. blah.</p>
+    <p>
+        <a href="https://www.google.com">Go To Google</a>
+    </p>
+    <p>
+        <a href="{% url 'amir'%}">Go To Amir Page</a>
+    </p>
+    <p>
+        <a href="{% url 'ali'%}">Go To Ali Page</a>
+    </p>
+    <p>
+        <a href="{% url 'abbas'%}">Go To Abbas Page</a>
+    </p>    
+    <h2>
+        This is Ali's Page
+    </h2>
+    <ul>
+        {% for item in mylist %}
+        <li>
+            {{ item }}
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

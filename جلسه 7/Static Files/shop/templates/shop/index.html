@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+</head>
+<body>
+    <img src="{% static 'shop/imgs/1.jpeg' %}" alt="">
+    <h1>Hello :D</h1>
+    <h2>Welcome to Static file pages :D</h2>
+    <input type="button" value="Don't Click on Me!!!", onclick="f()">
+    <script src="{% static 'shop/js/functions.js' %}"></script>
+</body>
+</html>
